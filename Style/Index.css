@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+li,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.bgLight {
+  background-color: #f2f2ff;
+}
+
+.bgDark {
+  background-color: #0c0c28;
+}
+
+body {
+  min-height: 100vh;
+}
+body .darkBtn {
+  border-radius: 50%;
+}
+body form {
+  border-radius: 1rem;
+}
+body form .submitBtn {
+  background-color: #3935ff;
+}
+body form .form-control {
+  border-color: grey;
+}
+body form .form-control::placeholder {
+  font-size: 16px;
+  color: grey;
+  font-weight: normal;
+}
+body form .form-label {
+  font-size: 16px;
+  color: grey;
+  font-weight: normal;
+}
+body form .forgetPassword a {
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  font-weight: normal;
+  cursor: pointer;
+}
+body form .forgetPassword a:hover {
+  font-size: 14px;
+  color: grey;
+  font-weight: normal;
+}
+
+.dark form {
+  background-color: #212141 !important;
+}
+.dark form h2 {
+  color: white;
+}
+.dark form .form-check-label {
+  font-size: 16px;
+  color: grey;
+  font-weight: normal;
+}
+.dark form .forgetPassword a {
+  color: grey !important;
+}
+.dark form .forgetPassword a:hover {
+  color: white !important;
+}
+.dark form .newHere {
+  color: grey !important;
+}
+.dark form .submitBtn {
+  background-color: #5c59fd !important;
+}
+
+/*# sourceMappingURL=Index.css.map */

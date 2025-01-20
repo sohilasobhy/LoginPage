@@ -1,0 +1,92 @@
+$bg-light: #f2f2ff;
+$bg-dark: #0c0c28;
+$main-color: grey;
+
+@mixin text-style($size: 16px, $color: $main-color, $weight: normal) {
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+li,
+ul {
+  margin: 0;
+  padding: 0;
+}
+.bgLight {
+  background-color: $bg-light;
+}
+.bgDark {
+  background-color: $bg-dark;
+}
+body {
+  .darkBtn {
+    border-radius: 50%;
+  }
+  min-height: 100vh;
+
+  form {
+    border-radius: 1rem;
+    .submitBtn {
+      background-color: #3935ff;
+    }
+    .form-control {
+      border-color: $main-color;
+      &::placeholder {
+        @include text-style;
+      }
+    }
+    .form-label {
+      @include text-style;
+    }
+    .forgetPassword {
+      a {
+        text-decoration: none;
+        @include text-style(14px, black);
+        cursor: pointer;
+        &:hover {
+          @include text-style(14px);
+        }
+      }
+    }
+  }
+}
+.dark {
+  form {
+    background-color: #212141 !important;
+    h2 {
+      color: white;
+    }
+    .form-check-label {
+      @include text-style;
+    }
+    .forgetPassword {
+      a {
+        color: $main-color !important;
+        &:hover {
+          color: white !important;
+        }
+      }
+    }
+    .newHere {
+      color: $main-color !important;
+    }
+    .submitBtn {
+      background-color: #5c59fd !important;
+    }
+  }
+}
