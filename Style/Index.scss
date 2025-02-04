@@ -27,18 +27,51 @@ ul {
   margin: 0;
   padding: 0;
 }
-.bgLight {
-  background-color: $bg-light;
-}
-.bgDark {
-  background-color: $bg-dark;
-}
 body {
+  &.bgLight {
+    background-color: $bg-light;
+    .forgetPassword {
+      a {
+        text-decoration: none;
+        @include text-style(14px, black);
+        cursor: pointer;
+        &:hover {
+          @include text-style(14px);
+        }
+      }
+    }
+  }
+  &.bgDark {
+    background-color: $bg-dark;
+    form {
+      background-color: #212141 !important;
+      h2 {
+        color: white;
+      }
+      .form-check-label {
+        @include text-style;
+      }
+      .forgetPassword {
+        a {
+          text-decoration: none;
+          @include text-style(14px, $main-color);
+          &:hover {
+            @include text-style(14px, white);
+          }
+        }
+      }
+      .newHere {
+        color: $main-color !important;
+      }
+      .submitBtn {
+        background-color: #5c59fd !important;
+      }
+    }
+  }
   .darkBtn {
     border-radius: 50%;
   }
   min-height: 100vh;
-
   form {
     border-radius: 1rem;
     .submitBtn {
@@ -52,41 +85,6 @@ body {
     }
     .form-label {
       @include text-style;
-    }
-    .forgetPassword {
-      a {
-        text-decoration: none;
-        @include text-style(14px, black);
-        cursor: pointer;
-        &:hover {
-          @include text-style(14px);
-        }
-      }
-    }
-  }
-}
-.dark {
-  form {
-    background-color: #212141 !important;
-    h2 {
-      color: white;
-    }
-    .form-check-label {
-      @include text-style;
-    }
-    .forgetPassword {
-      a {
-        color: $main-color !important;
-        &:hover {
-          color: white !important;
-        }
-      }
-    }
-    .newHere {
-      color: $main-color !important;
-    }
-    .submitBtn {
-      background-color: #5c59fd !important;
     }
   }
 }
