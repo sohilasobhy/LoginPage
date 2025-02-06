@@ -19,79 +19,72 @@ ul {
   padding: 0;
 }
 
+.bgLight {
+  --background: #f2f2ff;
+  --formBg: white;
+  --btnBg: #3935ff;
+  --inputColor: #c0c0f8;
+}
+
+.bgDark {
+  --background: #0c0c28;
+  --formBg: #212141;
+  --h2Color: #e9e9f9;
+  --btnBg: #5c59fd;
+  --inputColor: #4c4c71;
+}
+
 body {
+  background-color: var(--background);
   min-height: 100vh;
 }
-body.bgLight {
-  background-color: #f2f2ff;
-}
-body.bgLight .forgetPassword a {
+body .forgetPassword a {
   text-decoration: none;
   font-size: 14px;
-  color: black;
+  color: gray;
   font-weight: normal;
   cursor: pointer;
-}
-body.bgLight .forgetPassword a:hover {
-  font-size: 14px;
-  color: grey;
-  font-weight: normal;
-}
-body.bgDark {
-  background-color: #0c0c28;
-}
-body.bgDark form {
-  background-color: #212141 !important;
-}
-body.bgDark form h2 {
-  color: white;
-}
-body.bgDark form .form-check-label {
-  font-size: 16px;
-  color: grey;
-  font-weight: normal;
-}
-body.bgDark form .forgetPassword a {
-  text-decoration: none;
-  font-size: 14px;
-  color: grey;
-  font-weight: normal;
-}
-body.bgDark form .forgetPassword a:hover {
-  font-size: 14px;
-  color: white;
-  font-weight: normal;
-}
-body.bgDark form .newHere {
-  color: grey !important;
-}
-body.bgDark form .submitBtn {
-  background-color: #5c59fd !important;
 }
 body .darkBtn {
   border-radius: 50%;
 }
 body form {
+  background-color: var(--formBg);
   border-radius: 1rem;
 }
+body form h2 {
+  color: var(--h2Color);
+}
+body form .newHere {
+  color: #75749c;
+}
 body form .submitBtn {
-  background-color: #3935ff;
+  background-color: var(--btnBg);
 }
 body form .form-control {
-  border-color: grey;
+  border-color: var(--inputColor);
+  background-color: var(--formBg);
 }
 body form .form-control::-moz-placeholder {
-  font-size: 16px;
-  color: grey;
+  font-size: 14px;
+  color: var(--inputColor);
   font-weight: normal;
 }
 body form .form-control::placeholder {
-  font-size: 16px;
-  color: grey;
+  font-size: 14px;
+  color: var(--inputColor);
+  font-weight: normal;
+}
+body form .form-check-input {
+  background-color: var(--formBg);
+}
+body form .form-check-label {
+  font-size: 14px;
+  color: var(--h2Color);
   font-weight: normal;
 }
 body form .form-label {
-  font-size: 16px;
-  color: grey;
+  font-size: 14px;
+  color: #75749c;
   font-weight: normal;
 }/*# sourceMappingURL=Index.css.map */

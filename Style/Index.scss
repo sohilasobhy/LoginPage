@@ -1,12 +1,10 @@
-$bg-light: #f2f2ff;
-$bg-dark: #0c0c28;
-$main-color: grey;
-
-@mixin text-style($size: 16px, $color: $main-color, $weight: normal) {
+$textColor: #75749c;
+@mixin text-style($size: 14px, $color: null, $weight: normal) {
   font-size: $size;
   color: $color;
   font-weight: $weight;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -27,45 +25,28 @@ ul {
   margin: 0;
   padding: 0;
 }
+.bgLight {
+  --background: #f2f2ff;
+  --formBg: white;
+  --btnBg: #3935ff;
+  --inputColor: #c0c0f8;
+}
+
+.bgDark {
+  --background: #0c0c28;
+  --formBg: #212141;
+  --h2Color: #e9e9f9;
+  --btnBg: #5c59fd;
+  --inputColor: #4c4c71;
+}
+
 body {
-  &.bgLight {
-    background-color: $bg-light;
-    .forgetPassword {
-      a {
-        text-decoration: none;
-        @include text-style(14px, black);
-        cursor: pointer;
-        &:hover {
-          @include text-style(14px);
-        }
-      }
-    }
-  }
-  &.bgDark {
-    background-color: $bg-dark;
-    form {
-      background-color: #212141 !important;
-      h2 {
-        color: white;
-      }
-      .form-check-label {
-        @include text-style;
-      }
-      .forgetPassword {
-        a {
-          text-decoration: none;
-          @include text-style(14px, $main-color);
-          &:hover {
-            @include text-style(14px, white);
-          }
-        }
-      }
-      .newHere {
-        color: $main-color !important;
-      }
-      .submitBtn {
-        background-color: #5c59fd !important;
-      }
+  background-color: var(--background);
+  .forgetPassword {
+    a {
+      text-decoration: none;
+      @include text-style($color: gray);
+      cursor: pointer;
     }
   }
   .darkBtn {
@@ -73,18 +54,32 @@ body {
   }
   min-height: 100vh;
   form {
+    background-color: var(--formBg);
     border-radius: 1rem;
+    h2 {
+      color: var(--h2Color);
+    }
+    .newHere {
+      color: $textColor;
+    }
     .submitBtn {
-      background-color: #3935ff;
+      background-color: var(--btnBg);
     }
     .form-control {
-      border-color: $main-color;
+      border-color: var(--inputColor);
+      background-color: var(--formBg);
       &::placeholder {
-        @include text-style;
+        @include text-style($color: var(--inputColor));
       }
     }
+    .form-check-input {
+      background-color: var(--formBg);
+    }
+    .form-check-label {
+      @include text-style($color: var(--h2Color));
+    }
     .form-label {
-      @include text-style;
+      @include text-style($color: $textColor);
     }
   }
 }
